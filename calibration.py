@@ -27,11 +27,11 @@ n_emitted_photons   = 5.6e3
 n_collected_photons = n_emitted_photons * np.cos(CCD_theta) * setup_omega 
 #* beam_area
 
-charge_elec_pC = 1.602e-7
 
 n_counts = 1e8
 n_elec = n_counts / (n_collected_photons * CCD_efficiency * CCD_lens_transm * CCD_gain) 
 
+charge_elec_pC = 1.602e-7
 charge = n_elec * charge_elec_pC
 
 print(charge)
